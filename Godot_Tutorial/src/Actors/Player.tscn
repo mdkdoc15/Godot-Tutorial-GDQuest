@@ -12,7 +12,9 @@ extents = Vector2( 42, 45 )
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 8
 script = ExtResource( 2 )
+speed = Vector2( 300, 1600 )
 gravity = 4000.0
+stomp_impulse = 2000.0
 
 [node name="Player" type="Sprite" parent="."]
 position = Vector2( 0, -48 )

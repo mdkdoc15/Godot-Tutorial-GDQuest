@@ -66,7 +66,6 @@ tracks/1/keys = {
 }
 
 [node name="Coin" type="Area2D"]
-modulate = Color( 0, 0, 0, 0 )
 scale = Vector2( 0.997957, 1 )
 collision_layer = 4
 script = ExtResource( 2 )
