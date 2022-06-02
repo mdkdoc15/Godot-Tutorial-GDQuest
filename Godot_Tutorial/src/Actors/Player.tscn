@@ -7,7 +7,7 @@
 extents = Vector2( 40, 44 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 42, 45 )
+extents = Vector2( 45, 45 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 8
@@ -35,14 +35,15 @@ drag_margin_left = 0.0
 drag_margin_top = 0.0
 drag_margin_right = 0.0
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="EnemyDetector" type="Area2D" parent="."]
 position = Vector2( 0, -1 )
 collision_layer = 0
 collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="EnemyDetector" type="CollisionShape2D" parent="EnemyDetector"]
 position = Vector2( 0, -44 )
 shape = SubResource( 2 )
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="EnemyDetector" to="." method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]
